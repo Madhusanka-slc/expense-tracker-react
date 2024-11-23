@@ -1,8 +1,23 @@
+import React from "react"
+import Header from "./component/Header"
+import './App.css'
+import Balance from "./component/Balance"
+import IncomeExpenses from "./component/IncomeExpenses"
+import TransactionList from "./component/TransactionList"
+import AddTransaction from "./component/AddTransaction"
+import { GlobalProvider } from "./context/GlobalState"
+
 function App() {
   return (
-  <div>
-    Hello World
-  </div>
+  <GlobalProvider>
+    <Header/>
+    <div className="container">
+      <Balance/>
+      <IncomeExpenses/>
+      <TransactionList/>
+      <AddTransaction/>
+    </div>
+  </GlobalProvider>
   )
 }
 
